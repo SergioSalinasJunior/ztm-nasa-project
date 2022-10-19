@@ -55,10 +55,13 @@ function loadPlanetsData () {
     });
 }
 
+function getAllPlanets() {
+    return habitablePlanets;
+}
 
 module.exports = {
     loadPlanetsData,
-    planets: habitablePlanets,
+    getAllPlanets,
 }
 
 // Results can be compared to the website below for possible habitable planets:
