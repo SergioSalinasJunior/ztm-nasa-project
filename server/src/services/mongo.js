@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-// Update below to match your own MongoDB connection string.
-const MONGO_URL = 'mongodb+srv://nasa-api:zYXF1Xq1RMj4bzX3@nasa-cluster.fwjaquz.mongodb.net/?retryWrites=true&w=majority';
+require('dotenv').config();
 
+// Update below to match your own MongoDB connection string.
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose.connection.once('open', () => {
   console.log('MongoDB connection ready!');
